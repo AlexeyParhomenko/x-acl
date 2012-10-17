@@ -13,8 +13,6 @@
 namespace alex {
 namespace acl {
 
-using namespace alex::acl;
-
 class Group {
 public:
 
