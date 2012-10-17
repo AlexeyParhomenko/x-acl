@@ -49,7 +49,7 @@ Linux:
     cd ~/src
     git clone https://github.com/AlexeyParhomenko/x-acl.git
     cd x-acl/Release
-    make
+    make all
 
 Once this is done you'll see:
 
