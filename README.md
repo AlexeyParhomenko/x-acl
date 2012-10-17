@@ -9,7 +9,6 @@ In general, an application may utilize such ACL's to control access to certain p
 
 * g++/gcc *4.3 is the minimum version*
 * GNU Make
-* Boost *1.37 is the minimum version*
 
 ## Configuration Access Controls 
 
