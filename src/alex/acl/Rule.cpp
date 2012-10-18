@@ -21,7 +21,7 @@ Rule::~Rule() {
 /**
  * Возвращает правило
  */
-std::vector<int>
+std::vector<unsigned long>
 Rule::get() {
 	return rule_;
 }
@@ -38,7 +38,7 @@ Rule::isAllow() {
  * Устанавливает правило
  */
 void
-Rule::set(std::vector<int> rule) {
+Rule::set(std::vector<unsigned long> rule) {
 	rule_ = rule;
 }
 

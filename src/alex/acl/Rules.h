@@ -40,7 +40,7 @@ public:
 protected:
 
 	std::vector<Rule *> rules_;
-	std::vector <int> convertToMask_(std::string rule);
+	std::vector <unsigned long> convertToMask_(std::string rule);
 
 };
 

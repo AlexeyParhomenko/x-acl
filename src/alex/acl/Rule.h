@@ -23,7 +23,7 @@ public:
 	/**
 	 * Возвращает правило
 	 */
-	std::vector<int> get();
+	std::vector<unsigned long> get();
 
 	/**
 	 * Разрешено ли?
@@ -33,7 +33,7 @@ public:
 	/**
 	 * Устанавливает правило
 	 */
-	void set(std::vector<int> rule);
+	void set(std::vector<unsigned long> rule);
 
 	/**
 	 * Устанавливает доступ
@@ -44,7 +44,7 @@ public:
 protected:
 
 	bool allow_;
-	std::vector<int> rule_;
+	std::vector<unsigned long> rule_;
 
 };
 

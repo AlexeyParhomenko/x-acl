@@ -94,10 +94,10 @@ Rules::addRule(std::string raw) {
 /**
  * Конвертируем набор символов в их int значения
  */
-std::vector <int>
+std::vector <unsigned long>
 Rules::convertToMask_(std::string rule) {
 
-	std::vector <int> rules;
+	std::vector <unsigned long> rules;
 
 	unsigned int i;
 	int chr, mask = 0;
@@ -118,7 +118,13 @@ Rules::convertToMask_(std::string rule) {
 
 			default:
 
-				mask += chr;
+				if (mask == 0) {
+					mask = chr;
+				}
+				else {
+					mask = chr << mask;
+				}
+
 				break;
 
 		}
@@ -150,7 +156,7 @@ Rules::isAllow(std::string resource, unsigned long idUser, unsigned long idOwner
 	}
 
 	// Конвертируем в маску
-	std::vector <int> mask = convertToMask_(resource);
+	std::vector <unsigned long> mask = convertToMask_(resource);
 
 	unsigned int i, currentMask, ruleSize;
 	std::vector<Rule *>::iterator it;
